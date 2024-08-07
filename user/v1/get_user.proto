@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/nochzato/ticketopia-user-service/pb";
+
+import "google/protobuf/timestamp.proto";
+import "user.proto";
+
+message GetUserRequest {
+	string id = 1;
+}
+
+message GetUserResponse {
+	User user = 1;
+}

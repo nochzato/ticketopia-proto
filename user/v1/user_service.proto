@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/nochzato/ticketopia-user-service/pb";
+
+import "google/protobuf/timestamp.proto";
+import "create_user.proto";
+import "get_user.proto";
+import "update_user.proto";
+
+service UserService {
+	rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+	rpc GetUser (GetUserRequest) returns (GetUserResponse);
+	rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse);
+}
