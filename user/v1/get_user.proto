@@ -4,8 +4,7 @@ package pb;
 
 option go_package = "github.com/nochzato/ticketopia-user-service/pb";
 
-import "google/protobuf/timestamp.proto";
-import "user.proto";
+import "user/v1/user.proto";
 
 message GetUserRequest {
 	string id = 1;

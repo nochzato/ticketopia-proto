@@ -4,10 +4,9 @@ package pb;
 
 option go_package = "github.com/nochzato/ticketopia-user-service/pb";
 
-import "google/protobuf/timestamp.proto";
-import "create_user.proto";
-import "get_user.proto";
-import "update_user.proto";
+import "user/v1/create_user.proto";
+import "user/v1/get_user.proto";
+import "user/v1/update_user.proto";
 
 service UserService {
 	rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
